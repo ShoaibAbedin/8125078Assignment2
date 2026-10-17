@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared spacing and sizing values, so layouts stay consistent (Lecture 3). -->
+<resources>
+
+    <!-- Spacing scale -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">48dp</dimen>
+
+    <!-- Screen padding -->
+    <dimen name="screen_padding_horizontal">24dp</dimen>
+    <dimen name="screen_padding_top">64dp</dimen>
+
+    <!-- Components -->
+    <dimen name="corner_card">12dp</dimen>
+    <dimen name="corner_field">12dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_corner">26dp</dimen>
+    <dimen name="card_accent_width">3dp</dimen>
+    <dimen name="progress_size">24dp</dimen>
+
+</resources>

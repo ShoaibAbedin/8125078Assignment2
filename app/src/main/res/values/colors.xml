@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Chronicle colour palette: parchment backgrounds, dark ink text and amber accents,
+    so the app feels like an archive. Text/background pairs meet WCAG AA contrast
+    (4.5:1 or higher) for readability (Lecture 3 - accessibility).
+-->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Brand accent: buttons, links, years, active states -->
+    <color name="chronicle_amber">#854F0B</color>
+    <color name="chronicle_on_amber">#FAF6EE</color>
+
+    <!-- Light amber tint: detail tiles and highlighted surfaces -->
+    <color name="chronicle_amber_container">#FAEEDA</color>
+    <color name="chronicle_on_amber_container">#633806</color>
+
+    <!-- Brighter amber for decorative accents (card edge strip) -->
+    <color name="chronicle_amber_accent">#BA7517</color>
+
+    <!-- Backgrounds and surfaces -->
+    <color name="chronicle_parchment">#FAF6EE</color>
+    <color name="chronicle_surface">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="chronicle_ink">#2C2C2A</color>
+    <color name="chronicle_ink_muted">#5F5E5A</color>
+    <color name="chronicle_heading">#412402</color>
+
+    <!-- Lines -->
+    <color name="chronicle_outline">#B4B2A9</color>
+    <color name="chronicle_divider">#D3D1C7</color>
+
+    <!-- Errors -->
+    <color name="chronicle_error">#A32D2D</color>
+
 </resources>

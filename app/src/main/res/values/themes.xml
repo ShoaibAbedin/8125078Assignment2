@@ -1,9 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App theme built on Material Design 3 (Lecture 3).
+    Mapping the Chronicle palette onto Material 3 colour roles means every Material
+    component (buttons, text fields, cards, toolbars) picks up the brand colours
+    automatically. NoActionBar is used because each screen draws its own header.
+-->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme._8125078Assignment2" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.Chronicle" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Material 3 colour roles -->
+        <item name="colorPrimary">@color/chronicle_amber</item>
+        <item name="colorOnPrimary">@color/chronicle_on_amber</item>
+        <item name="colorPrimaryContainer">@color/chronicle_amber_container</item>
+        <item name="colorOnPrimaryContainer">@color/chronicle_on_amber_container</item>
+        <item name="colorSecondary">@color/chronicle_amber_accent</item>
+        <item name="colorSurface">@color/chronicle_surface</item>
+        <item name="colorOnSurface">@color/chronicle_ink</item>
+        <item name="colorOnSurfaceVariant">@color/chronicle_ink_muted</item>
+        <item name="colorOutline">@color/chronicle_outline</item>
+        <item name="colorOutlineVariant">@color/chronicle_divider</item>
+        <item name="colorError">@color/chronicle_error</item>
+        <item name="android:colorBackground">@color/chronicle_parchment</item>
+        <item name="colorOnBackground">@color/chronicle_ink</item>
+
+        <!-- Default component styles -->
+        <item name="materialButtonStyle">@style/Widget.Chronicle.Button</item>
+        <item name="textInputStyle">@style/Widget.Chronicle.TextInputLayout</item>
+
+        <!-- Dark system bar icons so they stay readable on the light parchment -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <!-- Chronicle keeps its parchment look even when the phone is in dark mode -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
-    <style name="Theme._8125078Assignment2" parent="Base.Theme._8125078Assignment2" />
+    <style name="Theme.Chronicle" parent="Base.Theme.Chronicle" />
+
 </resources>
