@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A label/value tile on the details screen -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_detail_tile"
+    android:orientation="vertical"
+    android:padding="@dimen/space_md">
+
+    <TextView
+        android:id="@+id/tvFieldLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Chronicle.Label"
+        android:textColor="@color/chronicle_amber"
+        tools:text="Key figure" />
+
+    <TextView
+        android:id="@+id/tvFieldValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAppearance="@style/TextAppearance.Chronicle.Title"
+        android:textColor="@color/chronicle_on_amber_container"
+        tools:text="Winston Churchill" />
+
+</LinearLayout>

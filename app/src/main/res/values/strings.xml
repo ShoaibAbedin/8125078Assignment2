@@ -4,6 +4,7 @@
     <!-- Screen labels (navigation graph) -->
     <string name="login_screen_label">Log in</string>
     <string name="dashboard_screen_label">Dashboard</string>
+    <string name="details_screen_label">Details</string>
 
     <!-- Login -->
     <string name="login_tagline">Explore the moments that shaped the world</string>
@@ -42,4 +43,12 @@
         <item quantity="other">%1$d entries · %2$s</item>
     </plurals>
     <string name="error_dashboard_not_found">We couldn\'t find anything for this topic. Try logging in again.</string>
+
+    <!-- Details -->
+    <string name="details_back">Back</string>
+    <string name="details_about">About</string>
+    <plurals name="details_duration">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
 </resources>

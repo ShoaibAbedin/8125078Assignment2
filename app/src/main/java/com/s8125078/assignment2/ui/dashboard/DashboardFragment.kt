@@ -60,8 +60,9 @@ class DashboardFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter = EntityAdapter { _ ->
-            // TODO: open the details screen
+        adapter = EntityAdapter { entity ->
+            val action = DashboardFragmentDirections.actionDashboardFragmentToDetailsFragment(entity)
+            findNavController().navigate(action)
         }
         recyclerView.adapter = adapter
     }
