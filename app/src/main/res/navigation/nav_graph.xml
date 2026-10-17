@@ -32,6 +32,13 @@
         <argument
             android:name="keypass"
             app:argType="string" />
+
+        <!-- log out: back to login and clear the dashboard from the back stack -->
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

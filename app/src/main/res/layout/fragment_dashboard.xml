@@ -4,19 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/screen_padding_horizontal"
     tools:context=".ui.dashboard.DashboardFragment">
 
     <TextView
-        android:id="@+id/tvSignedIn"
+        android:id="@+id/tvDashboardTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginStart="@dimen/screen_padding_horizontal"
+        android:layout_marginTop="@dimen/space_lg"
+        android:accessibilityHeading="true"
+        android:text="@string/dashboard_title"
         android:textAppearance="@style/TextAppearance.Chronicle.Headline"
+        app:layout_constraintEnd_toStartOf="@id/btnLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_sm"
+        android:text="@string/dashboard_logout"
+        app:layout_constraintBottom_toBottomOf="@id/tvDashboardTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDashboardTitle" />
+
+    <TextView
+        android:id="@+id/tvDashboardSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding_horizontal"
+        android:layout_marginEnd="@dimen/screen_padding_horizontal"
+        android:layout_marginTop="@dimen/space_xs"
+        android:textAppearance="@style/TextAppearance.Chronicle.Body"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDashboardTitle"
+        tools:text="7 entries · History"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEntities"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_md"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/space_md"
+        android:paddingEnd="@dimen/space_md"
+        android:paddingBottom="@dimen/space_lg"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDashboardSubtitle"
+        tools:listitem="@layout/item_entity"
+        tools:visibility="visible" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/dashboard_loading"
+        android:indeterminate="true"
+        app:indicatorColor="@color/chronicle_amber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDashboardSlowHint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding_horizontal"
+        android:layout_marginEnd="@dimen/screen_padding_horizontal"
+        android:layout_marginTop="@dimen/space_md"
+        android:gravity="center"
+        android:text="@string/loading_slow_hint"
+        android:textAppearance="@style/TextAppearance.Chronicle.Label"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressDashboard" />
+
+    <!-- error message + retry, centred -->
+    <TextView
+        android:id="@+id/tvDashboardError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding_horizontal"
+        android:layout_marginEnd="@dimen/screen_padding_horizontal"
+        android:accessibilityLiveRegion="polite"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Chronicle.Body"
+        android:textColor="@color/chronicle_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnRetry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Signed in. Your topic is history." />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/error_network" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRetry"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_md"
+        android:text="@string/dashboard_retry"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDashboardError" />
+
+    <TextView
+        android:id="@+id/tvDashboardEmpty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding_horizontal"
+        android:layout_marginEnd="@dimen/screen_padding_horizontal"
+        android:gravity="center"
+        android:text="@string/dashboard_empty"
+        android:textAppearance="@style/TextAppearance.Chronicle.Body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

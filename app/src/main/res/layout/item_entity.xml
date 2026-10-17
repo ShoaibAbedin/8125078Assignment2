@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One card in the dashboard list (summary only, no description) -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/chronicle_surface"
+    app:cardCornerRadius="@dimen/corner_card"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/chronicle_divider"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="72dp">
+
+        <View
+            android:id="@+id/viewAccent"
+            android:layout_width="@dimen/card_accent_width"
+            android:layout_height="0dp"
+            android:background="@color/chronicle_amber_accent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvEntityPeriod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginEnd="@dimen/space_md"
+            android:textAppearance="@style/TextAppearance.Chronicle.Period"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewAccent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1939 – 1945" />
+
+        <TextView
+            android:id="@+id/tvEntityTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/space_md"
+            android:textAppearance="@style/TextAppearance.Chronicle.Title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewAccent"
+            app:layout_constraintTop_toBottomOf="@id/tvEntityPeriod"
+            app:layout_goneMarginTop="@dimen/space_md"
+            tools:text="World War II" />
+
+        <TextView
+            android:id="@+id/tvEntitySummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/space_md"
+            android:layout_marginBottom="@dimen/space_md"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Chronicle.Body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewAccent"
+            app:layout_constraintTop_toBottomOf="@id/tvEntityTitle"
+            tools:text="Global · Winston Churchill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

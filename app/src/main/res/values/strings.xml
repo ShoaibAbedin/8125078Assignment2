@@ -32,5 +32,14 @@
     <string name="error_unknown">Something went wrong. Try again.</string>
 
     <!-- Dashboard -->
-    <string name="dashboard_signed_in">Signed in. Your topic is %1$s.</string>
+    <string name="dashboard_title">The archive</string>
+    <string name="dashboard_logout">Log out</string>
+    <string name="dashboard_loading">Loading entries</string>
+    <string name="dashboard_retry">Try again</string>
+    <string name="dashboard_empty">Nothing in the archive yet.</string>
+    <plurals name="dashboard_entity_count">
+        <item quantity="one">%1$d entry · %2$s</item>
+        <item quantity="other">%1$d entries · %2$s</item>
+    </plurals>
+    <string name="error_dashboard_not_found">We couldn\'t find anything for this topic. Try logging in again.</string>
 </resources>

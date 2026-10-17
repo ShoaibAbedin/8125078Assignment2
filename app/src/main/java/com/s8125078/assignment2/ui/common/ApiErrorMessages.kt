@@ -13,6 +13,13 @@ fun ApiError.toLoginMessage(): Int = when (this) {
     else -> toGeneralMessage()
 }
 
+// on the dashboard a 4xx means the keypass wasn't recognised
+@StringRes
+fun ApiError.toDashboardMessage(): Int = when (this) {
+    ApiError.CLIENT -> R.string.error_dashboard_not_found
+    else -> toGeneralMessage()
+}
+
 @StringRes
 fun ApiError.toGeneralMessage(): Int = when (this) {
     ApiError.NETWORK -> R.string.error_network
