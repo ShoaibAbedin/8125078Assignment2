@@ -1,6 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Chronicle intentionally uses the same parchment theme in dark mode
-    (see values/themes.xml), so no night-specific overrides are needed.
--->
+<!-- Same theme in dark mode, nothing to override -->
 <resources />

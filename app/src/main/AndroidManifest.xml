@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Normal (install-time) permissions needed to call the NIT3213 API (Lecture 5) -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- android:name points to the Hilt application class (Lecture 7) -->
     <application
         android:name=".ChronicleApplication"
         android:allowBackup="true"

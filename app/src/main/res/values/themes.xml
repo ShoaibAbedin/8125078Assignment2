@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    App theme built on Material Design 3 (Lecture 3).
-    Mapping the Chronicle palette onto Material 3 colour roles means every Material
-    component (buttons, text fields, cards, toolbars) picks up the brand colours
-    automatically. NoActionBar is used because each screen draws its own header.
--->
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme.Chronicle" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Material 3 colour roles -->
         <item name="colorPrimary">@color/chronicle_amber</item>
         <item name="colorOnPrimary">@color/chronicle_on_amber</item>
         <item name="colorPrimaryContainer">@color/chronicle_amber_container</item>
@@ -23,15 +16,14 @@
         <item name="android:colorBackground">@color/chronicle_parchment</item>
         <item name="colorOnBackground">@color/chronicle_ink</item>
 
-        <!-- Default component styles -->
         <item name="materialButtonStyle">@style/Widget.Chronicle.Button</item>
         <item name="textInputStyle">@style/Widget.Chronicle.TextInputLayout</item>
 
-        <!-- Dark system bar icons so they stay readable on the light parchment -->
+        <!-- dark status bar icons on the light background -->
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
 
-        <!-- Chronicle keeps its parchment look even when the phone is in dark mode -->
+        <!-- keep the light look even in dark mode -->
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 

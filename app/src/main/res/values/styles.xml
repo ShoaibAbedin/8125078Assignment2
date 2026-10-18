@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Text and component styles. Headings use a serif typeface to give the app an
-    archival feel; body and labels use the default sans-serif for readability.
-    Text sizes use sp so they scale with the user's font size setting (Lecture 3).
--->
+<!-- Serif for headings, default font for everything else -->
 <resources>
 
-    <!-- Typography -->
     <style name="TextAppearance.Chronicle.Display" parent="TextAppearance.Material3.DisplaySmall">
         <item name="fontFamily">serif</item>
         <item name="android:fontFamily">serif</item>
@@ -49,7 +44,6 @@
         <item name="android:textSize">13sp</item>
     </style>
 
-    <!-- Components -->
     <style name="Widget.Chronicle.Button" parent="Widget.Material3.Button">
         <item name="android:minHeight">@dimen/button_height</item>
         <item name="cornerRadius">@dimen/button_corner</item>

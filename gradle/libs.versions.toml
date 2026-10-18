@@ -8,20 +8,19 @@ appcompat = "1.8.0"
 material = "1.14.0"
 activityKtx = "1.13.0"
 constraintlayout = "2.2.2"
-# Dependency injection (Lecture 7) - Hilt runs its code generation through KSP
+# Hilt (uses KSP instead of kapt)
 ksp = "2.3.11"
 hilt = "2.60.1"
-# Fragments, ViewModel and the Navigation Component (Lecture 4)
+# Fragments, ViewModel, navigation
 fragmentKtx = "1.8.9"
 lifecycle = "2.11.0"
 navigation = "2.10.2"
-# RecyclerView (Lecture 6)
 recyclerview = "1.4.0"
-# Networking and coroutines (Lecture 5)
+# Networking + coroutines
 retrofit = "2.11.0"
 okhttp = "4.12.0"
 coroutines = "1.10.2"
-# Unit testing (Lecture 8)
+# Testing
 mockk = "1.14.9"
 
 [libraries]
