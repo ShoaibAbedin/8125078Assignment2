@@ -1,7 +1,7 @@
 # Chronicle – NIT3213 Assignment 2
 
 **Student:** Shoaib Abedin (s8125078)
-**Unit:** NIT3213 Android Application Development, Victoria University (Footscray)
+**Unit:** NIT3213 Mobile Application Development, Victoria University (Footscray)
 
 Chronicle is an Android app that logs in to the NIT3213 API, loads the list of entities for my topic and shows the full details of each one. My keypass is `history`, so the app shows historical events, but it works with any topic the API returns.
 
